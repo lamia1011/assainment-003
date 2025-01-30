@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -25,22 +27,42 @@
         }
     </style>
 </head>
-<body>
-    <header class="container mx-auto">
-        <nav>
+<body class="sora-language">
+    <header class="bg-[#FFF9F4] h-20 border-b-4  border-gray-400 lg:border-0">
+        <nav class="container mx-auto py-3 grid grid-cols-1 lg:grid-cols-3">  
+          <div class="flex">              
             <!-- Icon -->
-           <div class="flex">
                <img src="c1-assets/logo-header.png" alt="">
-               <h1>Browse<span>4</span>Pets</h1>
+               <h1 class="text-3xl p-3 hidden lg:flex">Browse<span class="text-yellow-300">4</span>Pets</h1>
            </div>
            <!-- Menu item -->
-           <div>
-
-           </div>
-           <!-- Icon and Button -->
-           <div>
-
-           </div>
+           <div class="hidden lg:flex">
+            <ul class="flex gap-4 text-xl items-center px-1">
+                <li><a href="#">Find a pet</a></li>
+                <li><a href="#">Breeds</a></li>
+                <li><a href="#">Contac Us</a></li>
+            </ul>
+          </div>
+          <div class="hidden lg:flex items-center justify-end">
+            <!-- Icon -->
+            <div>
+              <i class="fa fa-bell-o" aria-hidden="true"></i>
+              <i class="fa fa-search px-2" aria-hidden="true"></i>
+            </div>
+            <div>
+              <button class="btn btn-outline btn-warning">Login</button>
+              <button class="btn btn-warning">Register</button>
+            </div>
+          </div>
+              <div class="dropdown flex justify-end -top-10">
+                <div  tabindex="0" role="button" class="btn-gost lg:hidden">
+                  <i class="fa fa-bars  text-gray-700 text-2xl" aria-hidden="true"></i>
+                  <ul class="dropdown-content menu z-[1]"
+                  ><li><a>Find a pet</a></li>
+                    <li><a>Breeds</a></li>
+                    <li><a>Contac Us</a></li></ul>
+                </div>
+              </div>
         </nav>
     </header>
 </body>
